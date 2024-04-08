@@ -734,3 +734,18 @@ function parent() {
   child();
 }
 parent();
+
+
+
+
+// Higher Order Functions - Map
+
+let MyNums=[1,2,3,4,5,6]
+
+let newarray=[]
+for(let i=0; i<newarray.length; i++){
+newarray.push(MyNums[i]+MyNums[i])
+}
+console.log(newarray)
+console.log(MyNums)
+console.log(`aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`)
