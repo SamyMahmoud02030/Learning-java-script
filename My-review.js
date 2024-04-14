@@ -739,13 +739,122 @@ parent();
 
 
 // Higher Order Functions - Map
+let myNums = [1, 2, 3, 4, 5, 6];
 
-let MyNums=[1,2,3,4,5,6]
+let newArray = [];
 
-let newarray=[]
-for(let i=0; i<newarray.length; i++){
-newarray.push(MyNums[i]+MyNums[i])
+for (let i = 0; i < myNums.length; i++) {
+  newArray.push(myNums[i] + myNums[i]);
 }
-console.log(newarray)
-console.log(MyNums)
-console.log(`aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`)
+
+console.log(newArray);
+
+// Same Idea With Map
+
+let addSelf = myNums.map(function (element, index, arr) {
+  console.log(`Current Element => ${element}`);
+  console.log(`Current Index => ${index}`);
+  console.log(`Array => ${arr}`);
+  console.log(`This => ${this}`);
+  return element + element;
+}, 10);
+
+// let addSelf = myNums.map((a) => a + a);
+
+console.log(addSelf);
+
+function addition(ele) {
+  return ele + ele;
+}
+
+let add = myNums.map(addition);
+
+console.log(add);
+
+
+console.clear()
+
+
+
+
+
+
+
+
+/*
+function
+- Map
+*/
+
+let swappingCases = "elZERo";
+let invertedNumbers = [1, -10, -20, 15, 100, -30];
+let ignoreNumbers = "Elz123er4o";
+
+// let sw = swappingCases
+//   .split("")
+//   .map(function (ele) {
+//     // Condition ? True : False
+//     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
+//   })
+//   .join("");
+
+// Arrow Function Version
+
+let sw = swappingCases
+  .split("")
+  .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+  .join("");
+
+console.log(sw);
+
+let inv = invertedNumbers.map((ele) =>  -ele)
+;
+
+console.log(inv);
+
+let ign = ignoreNumbers
+  .split("")
+  .map((ele)=> isNaN(parseInt(ele)) ? ele : "")
+  .join("");
+
+console.log(ign);
+
+
+/*
+function
+- filter
+*/
+let friend=["saeed","samy","zyad" ,"sahl"]
+
+let GetNumber=[1 , 2  ,3 , 4 , 5 , 6 ,7 ,8 ,9]
+
+
+let startbyS=friend.filter(function(s){
+  return s.startsWith("s") 
+  // =   return s.startsWith("s")? true: false
+})
+console.log(startbyS)
+
+
+let EvenNumbers =GetNumber.filter(function(Even){
+  return Even % 2===0
+})
+console.log(EvenNumbers)
+
+
+let mix ="A13BS2ZX"
+
+let mixS = mix
+  .split("")
+  .filter(function (ele){!isNaN(parseInt(ele)) 
+  }).map(function(ele){
+    ele *ele
+  }).join("")
+console.log(mixS)
+
+
+
+/*
+function
+- Reduce
+*/
