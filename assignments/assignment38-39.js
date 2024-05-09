@@ -1,83 +1,72 @@
- // Assignment-7 in Elzero Assignments
+// Assignment-8 
+let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+let num = 3;
 
-// var Case = 9; // "009"
-// let  Case = 20; // "020"
-const Case = 110; // "110"
+// Method 1
+myFriends.reverse().shift()
+console.log(myFriends.sort()); // ["Ahmed", "Elham", "Osama"];
 
-if(Case < 10){
- console.log(`00${Case}`);
-}else if(10 < Case && Case < 100){
-    console.log(`0${Case}`);
-}else if(Case > 100){
-    console.log(Case);
+// Method 2
+myFriends.length= num
+console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+
+
+let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
+
+
+
+friends.length= num
+friends.shift()
+console.log(friends); // ["Eman", "Osama"]
+
+
+
+let arrOne = ["C", "D", "X"];
+let arrTwo = ["A", "B", "Z"];
+let finalArr = arrTwo.concat(arrOne)
+
+// Write One Single Line Of Code
+
+console.log(finalArr.sort()); // ["Z", "X", "D", "C", "B", "A"]
+
+
+
+let website = "Go";
+let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
+
+console.log(words[website.length][num-num].slice(website.length,num+words.length).toUpperCase());
+
+
+
+let needle = "JS";
+let haystack = ["PHP", "JS", "Python"];
+
+if(needle==="JS"){
+    haystack="found"
 }
-
-
-// Edit What You Want Here
-
-let num1 = 11;
-let num2 = 10;
-let num3 = 11;
-let num4 = 33;
-
-/*
-  Do Not Edit Below This Line
-  Needed Output
-  True 7 Times
-*/
-
-// Condition 1
-
-if (num1 > num2) {
-  console.log("True");
-} else {
-  console.log("False");
+else{
+    haystack="Notfound"
 }
-
-// Condition 2
-
-if (num1 > num2 && num1 < num4) {
-  console.log("True");
-} else {
-  console.log("False");
+console.log(haystack)
+if(needle=="JS"){
+    haystack="found"
 }
-
-// Condition 3
-
-if (num1 > num2 && num1 === num3) {
-  console.log("True");
-} else {
-  console.log("False");
+else{
+    haystack="Notfound"
 }
-
-// Condition 4
-
-if ((num1 + num2) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
+console.log(haystack)
+if(needle="JS"){
+    haystack="found"
 }
-
-// Condition 5
-
-if ((num1 + num3) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
+else{
+    haystack="Notfound"
 }
+console.log(haystack)
 
-// Condition 6
 
-if ((num1 + num2 + num3) < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
 
-// Condition 7
+let arr1 = ["A", "C", "X"];
+let arr2 = ["D", "E", "F", "Y"];
+let allArrs = arr1.concat(arr2).sort();
 
-if (num4 - (num1 + num3) + num2 === 21) {
-  console.log("True");
-} else {
-  console.log("False");
-}
+console.log(allArrs.slice(arr2.length,arr2.length+arr2.length).join().toLowerCase()); // fxy

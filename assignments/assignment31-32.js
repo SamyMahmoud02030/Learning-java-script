@@ -1,13 +1,29 @@
-// Assignment-5 in Elzero Assignments
-let userName = "Elzero";
-console.log(userName.slice(0,1).toLowerCase()); // e
-console.log(userName.toLowerCase().slice(0,1)); // e
-console.log(userName.substring(0, 1).toLowerCase()); // e
-console.log(userName.substr(0, 1).toLowerCase()); // e
-console.log(userName.toLowerCase().substring(0, 1)); // e
-console.log(userName.slice(0,1).toLowerCase().repeat(3)); // eee
+// Assignment-6 
+console.log(100 == "100"); // true
+ console.log(100 < 1000); // true
+console.log(110 > 100 > 10 < 20); // true
+console.log(-10 == "-10"); // true
+console.log(! -50 > Number(+"-40")); // true
+console.log(! 10 < Number( -"-40")); // true
+console.log(Number("10") == 10); // true
+console.log(+ 20 > false); // true
 
 
-console.log(userName.startsWith("E"))
-console.log(userName.endsWith("o"))
-console.log(userName.includes("z"))
+let num1 = 10;
+let num2 = 20;
+
+console.log(!(num1 ==! num2)); // true
+console.log(!(num1 === num2)); // true
+console.log(num1 <= num2); // true
+console.log(num1 != num2); // true
+console.log(num1 < num2); // true
+console.log(num2 > num1); // true
+
+
+let a = 20;
+let b = 30;
+let c = 10;
+
+console.log(a < b && a > c || a < b); // true
+console.log(a < b || a > c); // true
+console.log(!(a > b) && !(a > b) && !(a < c) && !(a < c)); // true
